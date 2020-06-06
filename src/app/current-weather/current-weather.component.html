@@ -1,0 +1,16 @@
+<div>
+  <div *ngIf="!current">
+    no data
+  </div>
+</div>
+<div *ngIf="current">
+    <span>{{current.city}}, {{current.country}}</span>
+    <span> {{current.date | date: 'fullDate'}}</span>
+  </div>
+  <div>
+    <img [src]='current.image' width="100px" alt="Weather symbol">
+    <span> {{current.temperature | number: '1.0-0'}}&#8457;</span>
+  <div>
+    <span>{{current.description}}</span>
+  </div>
+</div>
